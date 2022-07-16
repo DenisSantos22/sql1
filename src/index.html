@@ -41,7 +41,7 @@
                   if(get_magic_quotes_gpc()){     //check if the worthless pile of crap magic quotes is enabled and if it is, strip the slashes from the query
                     $query=stripslashes($query);
                   }
-                  $conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);   
+                  $conn = new mysql($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);   
 
                   if($conn->connect_error){                                                           
                     header("HTTP/1.0 400 Bad Request");
